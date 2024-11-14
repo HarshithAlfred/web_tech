@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,7 +7,7 @@ body {
 header {
     background-color: #333;
     color: white;
-    padding: 1em 0;
+   
 }
 
 nav ul {
@@ -19,7 +18,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 1em;
+   
 }
 
 nav ul li a {
@@ -39,4 +38,22 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+li {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the buttons appear side by side */
+    font-size: 16px; /* Increase font size */
+    margin: 4px 2px; /* Some margin */
+    cursor: pointer; /* Pointer/hand icon */
+    border-radius: 12px; /* Rounded corners */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
 }

@@ -5,14 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <link rel="stylesheet" href="resume_css.css">
+    <link rel="icon" href="../assets/image.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+  <style>
+
+.nav-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:100%;
+        }
+
+        .nav-list li {
+            margin: 0 1em;
+        }
+
+        .nav-list img {
+            height: 45px;
+            padding-top: 40px;
+        }
+    .button {
+        background-color: black; /* Green background */
+        border: none; /* Remove borders */
+        color: white; /* White text */
+        padding: 10px 8px ; /* Some padding */
+        text-align: center; /* Centered text */
+        text-decoration: none; /* Remove underline */
+        display: inline-block;/* Make the buttons appear side by side */
+        font-size: 16px; /* Increase font size */
+        margin: 4px 2px ; /* Some margin */
+        cursor: pointer; /* Pointer/hand icon */
+        border-radius: 12px; /* Rounded corners */
+    }
+
+    .button:hover {
+        background-color: grey; /* Darker green on hover */
+    }
+</style>
     <header>
         <nav>
-            <ul class="navi">
-            <li><a href="index.html" style="color: blueviolet;"> *  Home</a></li>
-            <li><a href="biodata.html" style="color: blueviolet;">*  Bio-data</a></li>
+            <ul class="nav-list">
+            <li><a href="index.html" >  <button class="button">Home</button></a></li>
+            <li><a href="biodata.html"> <button class="button">Bio-Data</button> </a></li>
             </ul>
         </nav>
     </header>
@@ -152,7 +188,7 @@
           </div>
     </main>
     <footer>
-        <p>&copy; 2024-25 CSB</p>
+        <p class="nav-list">&copy; 2024-25 CSB</p>
     </footer>
     <script src="scripts.js"></script>
 </body>
