@@ -53,3 +53,23 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+.github-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.github-link p {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.github-link a {
+    color: #0366d6;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.github-link a:hover {
+    text-decoration: underline;
+}

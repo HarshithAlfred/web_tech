@@ -7,7 +7,8 @@
     <link rel="icon" href="../assets/image.png">
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./script.js" defer></script> <!-- Ensure the correct path -->
+    <!-- <script src="./script.js" defer></script> -->
+    <script src="./temp.js" defer></script> <!-- Ensure the correct path -->
 </head>
 <body>
     <header>
@@ -35,5 +36,30 @@
         </form>
         <div id="result"></div>
     </div>
+    <script>
+        $(document).ready(function() {
+            $('#registrationForm').on('submit', function(event) {
+                event.preventDefault();
+                const formData = $(this).serializeArray();
+                const data = {};
+                formData.forEach(item => {
+                    data[item.name] = item.value;
+                });
+
+                $.ajax({
+                    url: 'processForm.php',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(data),
+                    success: function(response) {
+                        $('#result').html(`<pre>${JSON.stringify(response, null, 2)}</pre>`);
+                    },
+                    error: function(error) {
+                        console.error('Error:', error);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
